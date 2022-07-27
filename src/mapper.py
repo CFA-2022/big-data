@@ -22,6 +22,7 @@ class Mapper(object):
                 key = row[3]
                 value = row[10]
                 self.emit(key, value)
+                
                  
     def __iter__(self):
         reader = csv.reader(self.stream, delimiter=';')
