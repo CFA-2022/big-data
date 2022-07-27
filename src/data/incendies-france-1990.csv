@@ -1,8 +1,3 @@
-"Nombre d'incendies suivant les critères de sélection : 41587"
-"Critères de sélection =>";"Date de première alerte, de : 1990-01-01 00:00:00";"Date de première alerte, jusqu'à : 2021-12-31 23:59:00";"France entière";"Type de feu F"
-"A noter :"
-"2010 - 64 : ";"Données perdues suite à un incident technique."
-"2011 - 64 : ";"Aucune donnée disponible."
 Année;Numéro;Département;"Code INSEE";Commune;"Date de première alerte";"Surface brûlée (m2)";"Surface forêt (m2)";"Surface autres terres boisées (m2)";"Surfaces non boisées naturelles (m2)";"Surfaces non boisées artificialisées (m2)";"Surfaces non boisées (m2)";"Précision des surfaces";Statut
 2006;2;01;01148;Dortan;"2006-02-27 13:56:00";10000;0;10000;0;0;0;;"Validé en force"
 2006;3;01;01321;Revonnas;"2006-03-15 16:02:00";10000;0;10000;0;0;0;;"Validé en force"
