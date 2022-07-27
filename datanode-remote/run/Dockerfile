@@ -1,6 +1,6 @@
 FROM bde2020/hadoop-base:2.0.0-hadoop3.2.1-java8
 
-HEALTHCHECK CMD curl -f http://172.16.2.16:9864/ || exit 1
+HEALTHCHECK CMD curl -f http://172.16.8.52:9864/ || exit 1
 
 ENV HDFS_CONF_dfs_datanode_data_dir=file:///hadoop/dfs/data
 RUN mkdir -p /hadoop/dfs/data
