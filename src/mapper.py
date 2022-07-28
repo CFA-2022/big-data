@@ -1,6 +1,8 @@
 import csv 
 import sys 
 
+ZONE_MED = ['2A', '2B', '48', '07', '26', '05', '30', '84', '04', '06', '83', '13', '34', '11', '66']
+
 class Mapper(object):
     
     def __init__(self, stream) -> None:
@@ -11,6 +13,7 @@ class Mapper(object):
     
     def map_incendies_moyen(self):
         for row in self: 
+            print(row)
             key = row[3] # departement
             value = row[10] # surface brulee
             self.emit(key, value)
@@ -23,7 +26,20 @@ class Mapper(object):
                 value = row[10]
                 self.emit(key, value)
                 
-                 
+    def map_incendies_med(self):
+        for row in self: 
+            if row[2] in ZONE_MED:
+                key = row[0]
+                value = row[6]
+                self.emit(key, value)
+    
+    def map_incendies_hors_med(self):
+        for row in self: 
+            if row[2] not in ZONE_MED:
+                key = row[0]
+                value = row[6]
+                self.emit(key, value)
+            
     def __iter__(self):
         reader = csv.reader(self.stream, delimiter=';')
         line_count = 0
@@ -35,4 +51,4 @@ class Mapper(object):
 
 if __name__ == '__main__':
     mapper = Mapper(sys.stdin)
-    mapper.map_incendies_period('2010', '2020') 
+    mapper.map_incendies_hors_med() 
