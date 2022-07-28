@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 csv = pandas.read_csv(r'./data/incendies-moyen.csv',  sep=';')
 
-fig, ax1 = plt.subplots(figsize=(20,16))
+fig, ax1 = plt.subplots(figsize=(12,6))
 
 res = sns.barplot(x="dep", y="surface", data=csv, ax=ax1, label="Surface")
 
